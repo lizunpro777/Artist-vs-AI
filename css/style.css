@@ -1,0 +1,101 @@
+/* Общие настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Подключаем необычный шрифт (например, Lobster) для заголовков */
+  h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive, sans-serif;
+  }
+  
+  /* Стиль тела страницы с плоским ("Флэт") дизайном в пастельно-зелёных тонах */
+  body {
+    background-color: #ecf4ec; /* Светло-пастельный зелёный фон */
+    color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Шапка сайта */
+  .site-header {
+    background-color: #9ed89e; /* Более тёмный пастельный зелёный */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .site-header h1 {
+    color: #fff;
+    font-size: 2em;
+  }
+  
+  /* Основной контейнер для контента */
+  .content-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+  }
+  
+  /* Заголовки */
+  h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #4b734b;
+  }
+  
+  /* Оформление списков */
+  ul {
+    margin: 10px 0 20px 20px;
+    list-style-type: disc;
+  }
+  
+  /* Блок с сравнением изображений */
+  .images-comparison {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #d0e8d0; /* светлый, чуть контрастный фон */
+    border-radius: 10px;
+  }
+  
+  .images-comparison h2 {
+    margin-bottom: 20px;
+  }
+  
+  .comparison-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+  }
+  
+  .image-block {
+    flex: 1 1 300px;
+    text-align: center;
+  }
+  
+  .image-block img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  .image-block p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #4b734b;
+  }
+  
+  /* Подвал сайта */
+  .site-footer {
+    background-color: #9ed89e;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+  }
+  
+  .site-footer p {
+    color: #fff;
+    font-size: 0.9em;
+  }
