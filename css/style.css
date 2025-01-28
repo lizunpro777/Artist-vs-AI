@@ -7,7 +7,7 @@
   
   /* Подключаем необычный шрифт (например, Lobster) для заголовков */
   h1, h2, h3, h4 {
-    font-family: 'Helsa Display', cursive, sans-serif;
+    font-family: Helsa Display, cursive, sans-serif;
   }
   
   /* Стиль тела страницы с плоским ("Флэт") дизайном в пастельно-зелёных тонах */
