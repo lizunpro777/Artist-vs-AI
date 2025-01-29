@@ -7,12 +7,12 @@
   
   /* Подключаем необычный шрифт (например, Lobster) для заголовков */
   h1, h2, h3, h4 {
-    font-family: Arial, cursive, sans-serif;
+    font-family: Simon, cursive, sans-serif;
   }
   
   /* Стиль тела страницы с плоским ("Флэт") дизайном в пастельно-зелёных тонах */
   body {
-    background-color: #ecf4ec; /* Светло-пастельный зелёный фон */
+    background-color: #b9edb9; /* Светло-пастельный зелёный фон */
     color: #333;
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -20,13 +20,13 @@
   
   /* Шапка сайта */
   .site-header {
-    background-color: #9ed89e; /* Более тёмный пастельный зелёный */
+    background-color: #8cad87; /* Более тёмный пастельный зелёный */
     padding: 20px;
     text-align: center;
   }
   
   .site-header h1 {
-    color: #fff;
+    color: #212b21;
     font-size: 2em;
   }
   
@@ -41,7 +41,7 @@
   h2 {
     margin-top: 40px;
     margin-bottom: 15px;
-    color: #4b734b;
+    color: #324a32;
   }
   
   /* Оформление списков */
