@@ -21,7 +21,7 @@
   /* Шапка сайта: фоновое изображение вместо однотонной подложки */
   .site-header {
     /* Замените путь на нужное фото: например, images/header-bg.jpg */
-    background: url('../images/header-bg.jpg') no-repeat center center;
+    background: url('/images/header-bg.jpg') no-repeat center center;
     background-size: cover;
     padding: 60px 20px;
     text-align: center;
