@@ -23,7 +23,7 @@ body {
   /* Чтобы вместо однотонной подложки использовать фотографию, замените background-color на background-image */
   background: url("images/header-bg.jpg") no-repeat center center; /* Замените header-bg.jpg на нужное изображение */
   background-size: cover;
-  padding: 20px;
+  padding: 100px;
   text-align: center;
 }
 
