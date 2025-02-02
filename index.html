@@ -256,6 +256,120 @@
     </aside>
   </main>
 
+<!-- Секция теста (4 блока) -->
+<section class="test-section">
+  <h2>Тест: выбери правильное изображение</h2>
+
+  <!-- Блок №1 -->
+  <div class="test-block">
+    <p>Вопрос 1: <!-- Здесь напишите вопрос или небольшое пояснение --></p>
+    <div class="test-images">
+      <!-- Здесь вставьте свое ПЕРВОЕ изображение (например, правильный вариант). 
+           Если хотите, чтобы оно было правильным, пропишите data-correct="true" -->
+      <img 
+        src="images/test1-img1.jpg"
+        data-correct="true"
+        alt="Вариант 1"
+      />
+
+      <!-- Здесь вставьте свое ВТОРОЕ изображение (неправильный вариант) -->
+      <img 
+        src="images/test1-img2.jpg"
+        data-correct="false"
+        alt="Вариант 2"
+      />
+    </div>
+    <div class="result-message"></div> <!-- Сюда будет выводиться результат -->
+  </div>
+
+  <!-- Блок №2 -->
+  <div class="test-block">
+    <p>Вопрос 2: <!-- Ваш текст вопроса --></p>
+    <div class="test-images">
+      <!-- Здесь вставьте свое ПЕРВОЕ изображение (true/false на ваше усмотрение) -->
+      <img 
+        src="images/test2-img1.jpg"
+        data-correct="false"
+        alt="Вариант 1"
+      />
+      <!-- Здесь вставьте свое ВТОРОЕ изображение -->
+      <img 
+        src="images/test2-img2.jpg"
+        data-correct="true"
+        alt="Вариант 2"
+      />
+    </div>
+    <div class="result-message"></div>
+  </div>
+
+  <!-- Блок №3 -->
+  <div class="test-block">
+    <p>Вопрос 3: <!-- Ваш текст вопроса --></p>
+    <div class="test-images">
+      <!-- Здесь вставьте свое ПЕРВОЕ изображение (true/false) -->
+      <img 
+        src="images/test3-img1.jpg"
+        data-correct="true"
+        alt="Вариант 1"
+      />
+      <!-- Здесь вставьте свое ВТОРОЕ изображение -->
+      <img 
+        src="images/test3-img2.jpg"
+        data-correct="false"
+        alt="Вариант 2"
+      />
+    </div>
+    <div class="result-message"></div>
+  </div>
+
+  <!-- Блок №4 -->
+  <div class="test-block">
+    <p>Вопрос 4: <!-- Ваш текст вопроса --></p>
+    <div class="test-images">
+      <!-- Здесь вставьте свое ПЕРВОЕ изображение (true/false) -->
+      <img 
+        src="images/test4-img1.jpg"
+        data-correct="false"
+        alt="Вариант 1"
+      />
+      <!-- Здесь вставьте свое ВТОРОЕ изображение -->
+      <img 
+        src="images/test4-img2.jpg"
+        data-correct="true"
+        alt="Вариант 2"
+      />
+    </div>
+    <div class="result-message"></div>
+  </div>
+</section>
+
+<script>
+  // Находим все блоки с классом "test-block"
+  const testBlocks = document.querySelectorAll('.test-block');
+
+  testBlocks.forEach((block) => {
+    const images = block.querySelectorAll('img');
+    const resultMessage = block.querySelector('.result-message');
+
+    // Для каждого изображения в блоке навешиваем обработчик клика
+    images.forEach((img) => {
+      img.addEventListener('click', () => {
+        // Проверяем, правильный ли ответ
+        if (img.dataset.correct === 'true') {
+          resultMessage.textContent = 'Это правильный ответ!';
+          // Зелёная плашка
+          resultMessage.style.color = 'green';
+        } else {
+          resultMessage.textContent = 'Это не правильный ответ!';
+          // Красная плашка
+          resultMessage.style.color = 'red';
+        }
+      });
+    });
+  });
+</script>
+
+
   <!-- Подвал сайта -->
   <footer class="site-footer">
     <p>© 2025. Искусство и нейросети.</p>
