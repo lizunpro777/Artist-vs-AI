@@ -167,7 +167,7 @@ ul {
 
 /* Сами изображения (кликабельные) */
 .test-images img {
-  width: 100px;   /* или другой размер */
+  width: 200px;   /* или другой размер */
   height: auto;
   cursor: pointer;
   border-radius: 5px;
@@ -185,5 +185,15 @@ ul {
   text-align: center;
   margin-top: 10px;
 }
+
+.test-images img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
 
 }
