@@ -20,12 +20,16 @@ body {
 
 /* Шапка сайта с возможностью задать фон в виде изображения */
 .site-header {
-  /* Чтобы вместо однотонной подложки использовать фотографию, замените background-color на background-image */
-  background: url("images/AAAAAA.jpg") no-repeat center center; /* Замените на нужное изображение */
-  background-size: 1000px;
-  padding: 50px;
+  background: url("images/AAAAAA.jpg") no-repeat center center;
+  background-size: cover; /* “cover” заполнит блок полностью, обрезая лишнее */
+  background-position: center; 
+  padding: 50px;    /* отступы сверху/снизу, если хотите “высокую” шапку */
   text-align: center;
+  min-height: 300px; 
+  /* или height: 300px, если хотите фиксированную высоту “баннера”. 
+     “cover” подгонит картинку под эту высоту, сохранив пропорции */
 }
+
 
 .site-header h1 {
   color: #212b21;
