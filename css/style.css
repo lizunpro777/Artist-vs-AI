@@ -23,7 +23,7 @@ body {
   /* Чтобы вместо однотонной подложки использовать фотографию, замените background-color на background-image */
   background: url("images/gr.jpg") no-repeat center center; /* Замените на нужное изображение */
   background-size: cover;
-  padding: 20px;
+  padding: 50px;
   text-align: center;
 }
 
