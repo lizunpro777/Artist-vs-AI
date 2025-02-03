@@ -18,17 +18,13 @@ body {
   line-height: 1.6;
 }
 
-/* ------------------------------------
-   Шапка сайта с фоновым изображением
-------------------------------------- */
+/* Шапка сайта с возможностью задать фон в виде изображения */
 .site-header {
-  /* Вместо background-size: 1000px используем cover */
-  background: url("images/AAAAAA.jpg") no-repeat center center;
-  background-size: cover;        /* Заполняем весь блок */
-  background-position: center;   /* Центрируем, если обрезается */
-  min-height: 300px;            /* Минимальная высота шапки, меняйте под себя */
+  /* Чтобы вместо однотонной подложки использовать фотографию, замените background-color на background-image */
+  background: url("images/AAAAAA.jpg") no-repeat center center; /* Замените на нужное изображение */
+  background-size: cover;
+  padding: 50px;
   text-align: center;
-  padding: 50px;                /* Отступы сверху и снизу для "баннера" */
 }
 
 .site-header h1 {
@@ -36,7 +32,7 @@ body {
   font-size: 2em;
 }
 
-/* Обёртка для контента и боковых изображений */
+/* Обертка для контента и боковых изображений */
 .page-wrapper {
   /* На мобильных устройствах используется блочный режим */
   display: block;
@@ -88,11 +84,11 @@ ul {
   text-align: center;
 }
 
-/* Картинки внутри блока .image-block */
-/* max-width: 250px → можно менять для уменьшения/увеличения */
+/* Здесь уменьшаем картинки внутри блока .image-block */
+/* max-width: 300px означает, что картинка не будет шире 300px */
 .image-block img {
-  max-width: 250px;
-  width: 100%;      /* На мобильных экранах сужается вместе с контейнером */
+  max-width: 250px; /* <-- Меняя это число, вы регулируете максимальную ширину */
+  width: 100%;      /* Пусть на узких экранах она сжимается до контейнера */
   height: auto;
   border-radius: 6px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
@@ -104,9 +100,7 @@ ul {
   color: #4b734b;
 }
 
-/* ------------------------------------
-   Подвал (footer)
-------------------------------------- */
+/* Подвал сайта */
 .site-footer {
   background-color: #9ed89e;
   text-align: center;
@@ -123,7 +117,7 @@ ul {
    Стили для боковых изображений (видны только на ПК)
 ------------------------------------- */
 .side-image {
-  display: none; /* Скрываем на мобильных */
+  display: none;
 }
 
 @media (min-width: 1024px) {
@@ -135,25 +129,15 @@ ul {
   .side-image {
     display: block;
     flex: 0 0 auto;
-
-    /* Увеличиваем ширину, если хотим более широкие боковые картинки */
-    /* И добавляем фиксированную высоту, если нужно высокое изображение */
-    width: 250px;    
-    height: 400px;   /* или 100vh (на всю высоту экрана) */
-
+    width: 150px; /* Измените здесь ширину бокового изображения по необходимости */
     margin: 0 20px;
-    overflow: hidden; /* чтобы обрезать лишнее при object-fit: cover */
   }
-
   .side-image img {
-    /* Заполняем полностью блок side-image */
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Картинка не искажается, а обрезается */
+    height: auto;
     border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   }
-
   .content-container {
     flex: 1 1 auto;
   }
@@ -172,7 +156,7 @@ ul {
 }
 
 /* ------------------------------------
-   Секция теста (вопросы/ответы)
+   Секция теста
 ------------------------------------- */
 .test-section {
   margin-top: 40px;
@@ -195,8 +179,9 @@ ul {
 }
 
 /* Сами изображения (кликабельные) */
+/* Тут width: 200px, меняйте это число, чтобы увеличить/уменьшить */
 .test-images img {
-  width: 250px;  /* Меняйте под нужный размер */
+  width: 250px;
   height: auto;
   cursor: pointer;
   border-radius: 5px;
