@@ -181,7 +181,7 @@ ul {
 /* Сами изображения (кликабельные) */
 /* Тут width: 200px, меняйте это число, чтобы увеличить/уменьшить */
 .test-images img {
-  width: 100px;
+  width: 200px;
   height: auto;
   cursor: pointer;
   border-radius: 5px;
