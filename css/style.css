@@ -22,7 +22,7 @@ body {
 .site-header {
   /* Чтобы вместо однотонной подложки использовать фотографию, замените background-color на background-image */
   background: url("images/AAAAAA.jpg") no-repeat center center; /* Замените на нужное изображение */
-  background-size: 200px;
+  background-size: 1000px;
   padding: 50px;
   text-align: center;
 }
