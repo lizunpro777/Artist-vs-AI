@@ -117,7 +117,6 @@ ul {
    Стили для боковых изображений (видны только на ПК)
 ------------------------------------- */
 .side-image {
-  background: url("images/AAAAAA.jpg")
   display: none;
 }
 
