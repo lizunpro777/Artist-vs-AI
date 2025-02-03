@@ -21,8 +21,8 @@ body {
 /* Шапка сайта с возможностью задать фон в виде изображения */
 .site-header {
   /* Чтобы вместо однотонной подложки использовать фотографию, замените background-color на background-image */
-  background: url("images/A.pdf") no-repeat center center; /* Замените на нужное изображение */
-  background-size: cover;
+  background: url("images/AAAAAA.jpg") no-repeat center center; /* Замените на нужное изображение */
+  background-size: 200px;
   padding: 50px;
   text-align: center;
 }
