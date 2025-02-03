@@ -18,13 +18,12 @@
 
   <!-- Шапка сайта с возможностью задать фоновое изображение -->
   <header class="site-header">
-    <!-- Чтобы использовать фотографию вместо подложки, отредактируйте правило .site-header в CSS -->
     <h1>Сравнение нейросетей и реальных художников</h1>
   </header>
 
   <!-- Основной блок контента с боковыми изображениями (видны только на ПК) -->
   <main class="page-wrapper">
-    <!-- Боковое изображение слева (замените путь к изображению по необходимости) -->
+    <!-- Боковое изображение слева -->
     <aside class="side-image left">
       <img src="images/side_left.jpg" alt="Левая боковая фотография" />
     </aside>
@@ -47,7 +46,6 @@
           человека с алгоритмами машин?
         </p>
 
-
         <p>
           В этом лонгриде мы поговорим о том, как развивались искусство 
           и технологии, рассмотрим плюсы и минусы обоих подходов к созданию 
@@ -56,9 +54,11 @@
         </p>
       </section>
 
- <div class="text-window">
-          А как сичтаете вы? Может ли алгоритм написать "Звездную ночь" или это прерогатива безумцев вроде Ван Гога?
-        </div>
+      <!-- Пример окна между абзацами -->
+      <div class="text-window">
+        А как считаете вы? Может ли алгоритм написать «Звёздную ночь» 
+        или это прерогатива безумцев вроде Ван Гога?
+      </div>
 
       <!-- Блок "История искусства и развитие нейросетей" -->
       <section>
@@ -154,9 +154,10 @@
         </p>
       </section>
 
- <div class="text-window">
-          Художник боится, что ИИ его заменит, а ИИ боится, что художник отключит Wi-Fi.
-        </div>
+      <!-- Пример другого окна -->
+      <div class="text-window">
+        Художник боится, что ИИ его заменит, а ИИ боится, что художник отключит Wi-Fi.
+      </div>
 
       <!-- Блок "Сравнение нейросетей и реальных художников: плюсы и минусы" -->
       <section>
@@ -250,125 +251,110 @@
 
     </div>
 
-    <!-- Боковое изображение справа (замените путь к изображению по необходимости) -->
+    <!-- Боковое изображение справа -->
     <aside class="side-image right">
       <img src="images/side_right.jpg" alt="Правая боковая фотография" />
     </aside>
   </main>
 
-<!-- Секция теста (4 блока) -->
-<section class="test-section">
-  <h2>Тест: выбери правильное изображение которое нарисовала нейросеть</h2>
+  <!-- Секция теста (4 блока) -->
+  <section class="test-section">
+    <h2>Тест: выбери правильное изображение, которое нарисовала нейросеть</h2>
 
-  <!-- Блок №1 -->
-  <div class="test-block">
-    <p>Вопрос 1: <!-- Здесь напишите вопрос или небольшое пояснение --></p>
-    <div class="test-images">
-      <!-- Здесь вставьте свое ПЕРВОЕ изображение (например, правильный вариант). 
-           Если хотите, чтобы оно было правильным, пропишите data-correct="true" -->
-      <img 
-        src="css/images/true.jpg"
-        data-correct="true"
-        alt="Вариант 1"
-      />
-
-      <!-- Здесь вставьте свое ВТОРОЕ изображение (неправильный вариант) -->
-      <img 
-        src="css/images/false.jpg"
-        data-correct="false"
-        alt="Вариант 2"
-      />
+    <!-- Блок №1 -->
+    <div class="test-block">
+      <p>Вопрос 1: <!-- Здесь напишите вопрос или пояснение --></p>
+      <div class="test-images">
+        <img 
+          src="css/images/true.jpg"
+          data-correct="true"
+          alt="Вариант 1"
+        />
+        <img 
+          src="css/images/false.jpg"
+          data-correct="false"
+          alt="Вариант 2"
+        />
+      </div>
+      <div class="result-message"></div>
     </div>
-    <div class="result-message"></div> <!-- Сюда будет выводиться результат -->
-  </div>
 
-  <!-- Блок №2 -->
-  <div class="test-block">
-    <p>Вопрос 2: <!-- Ваш текст вопроса --></p>
-    <div class="test-images">
-      <!-- Здесь вставьте свое ПЕРВОЕ изображение (true/false на ваше усмотрение) -->
-      <img 
-        src="css/images/qwe.jpg"
-        data-correct="false"
-        alt="Вариант 1"
-      />
-      <!-- Здесь вставьте свое ВТОРОЕ изображение -->
-      <img 
-        src="css/images/ded.jpg"
-        data-correct="true"
-        alt="Вариант 2"
-      />
+    <!-- Блок №2 -->
+    <div class="test-block">
+      <p>Вопрос 2: <!-- Ваш текст вопроса --></p>
+      <div class="test-images">
+        <img 
+          src="css/images/qwe.jpg"
+          data-correct="false"
+          alt="Вариант 1"
+        />
+        <img 
+          src="css/images/ded.jpg"
+          data-correct="true"
+          alt="Вариант 2"
+        />
+      </div>
+      <div class="result-message"></div>
     </div>
-    <div class="result-message"></div>
-  </div>
 
-  <!-- Блок №3 -->
-  <div class="test-block">
-    <p>Вопрос 3: <!-- Ваш текст вопроса --></p>
-    <div class="test-images">
-      <!-- Здесь вставьте свое ПЕРВОЕ изображение (true/false) -->
-      <img 
-        src="css/images/kish.jpg"
-        data-correct="true"
-        alt="Вариант 1"
-      />
-      <!-- Здесь вставьте свое ВТОРОЕ изображение -->
-      <img 
-        src="css/images/ok.jpg"
-        data-correct="false"
-        alt="Вариант 2"
-      />
+    <!-- Блок №3 -->
+    <div class="test-block">
+      <p>Вопрос 3: <!-- Ваш текст вопроса --></p>
+      <div class="test-images">
+        <img 
+          src="css/images/kish.jpg"
+          data-correct="true"
+          alt="Вариант 1"
+        />
+        <img 
+          src="css/images/ok.jpg"
+          data-correct="false"
+          alt="Вариант 2"
+        />
+      </div>
+      <div class="result-message"></div>
     </div>
-    <div class="result-message"></div>
-  </div>
 
-  <!-- Блок №4 -->
-  <div class="test-block">
-    <p>Вопрос 4: <!-- Ваш текст вопроса --></p>
-    <div class="test-images">
-      <!-- Здесь вставьте свое ПЕРВОЕ изображение (true/false) -->
-      <img 
-        src="css/images/realwomen.jpg"
-        data-correct="false"
-        alt="Вариант 1"
-      />
-      <!-- Здесь вставьте свое ВТОРОЕ изображение -->
-      <img 
-        src="css/images/women.jpg"
-        data-correct="true"
-        alt="Вариант 2"
-      />
+    <!-- Блок №4 -->
+    <div class="test-block">
+      <p>Вопрос 4: <!-- Ваш текст вопроса --></p>
+      <div class="test-images">
+        <img 
+          src="css/images/realwomen.jpg"
+          data-correct="false"
+          alt="Вариант 1"
+        />
+        <img 
+          src="css/images/women.jpg"
+          data-correct="true"
+          alt="Вариант 2"
+        />
+      </div>
+      <div class="result-message"></div>
     </div>
-    <div class="result-message"></div>
-  </div>
-</section>
+  </section>
 
-<script>
-  // Находим все блоки с классом "test-block"
-  const testBlocks = document.querySelectorAll('.test-block');
+  <!-- Скрипт для проверки ответов -->
+  <script>
+    const testBlocks = document.querySelectorAll('.test-block');
 
-  testBlocks.forEach((block) => {
-    const images = block.querySelectorAll('img');
-    const resultMessage = block.querySelector('.result-message');
+    testBlocks.forEach((block) => {
+      const images = block.querySelectorAll('img');
+      const resultMessage = block.querySelector('.result-message');
 
-    // Для каждого изображения в блоке навешиваем обработчик клика
-    images.forEach((img) => {
-      img.addEventListener('click', () => {
-        // Проверяем, правильный ли ответ
-        if (img.dataset.correct === 'true') {
-          resultMessage.textContent = 'Это правильный ответ!';
-          // Зелёная плашка
-          resultMessage.style.color = 'green';
-        } else {
-          resultMessage.textContent = 'Это не правильный ответ!';
-          // Красная плашка
-          resultMessage.style.color = 'red';
-        }
+      images.forEach((img) => {
+        img.addEventListener('click', () => {
+          if (img.dataset.correct === 'true') {
+            resultMessage.textContent = 'Это правильный ответ!';
+            resultMessage.style.color = 'green';
+          } else {
+            resultMessage.textContent = 'Это не правильный ответ!';
+            resultMessage.style.color = 'red';
+          }
+        });
       });
     });
-  });
-</script>
-
+  </script>
 
   <!-- Подвал сайта -->
   <footer class="site-footer">
