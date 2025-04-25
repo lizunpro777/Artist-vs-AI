@@ -20,6 +20,7 @@
 
   <div class="content-container">
 
+    <!-- Введение -->
     <section>
       <h2>Введение</h2>
       <p>
@@ -47,6 +48,7 @@
       или это прерогатива безумцев вроде Ван Гога?
     </div>
 
+    <!-- История искусства и развитие нейросетей -->
     <section>
       <h2>История искусства и развитие нейросетей</h2>
 
@@ -144,6 +146,7 @@
       Художник боится, что ИИ его заменит, а ИИ боится, что художник отключит Wi-Fi.
     </div>
 
+    <!-- Сравнение нейросетей и реальных художников: плюсы и минусы -->
     <section>
       <h2>Сравнение нейросетей и реальных художников: плюсы и минусы</h2>
 
@@ -179,6 +182,7 @@
       </ul>
     </section>
 
+    <!-- Интересные факты -->
     <section>
       <h2>Интересные факты</h2>
       <ul>
@@ -189,6 +193,7 @@
       </ul>
     </section>
 
+    <!-- Заключение -->
     <section>
       <h2>Заключение</h2>
       <p>
@@ -214,23 +219,29 @@
       </p>
     </section>
 
-    <section class="images-comparison">
+    <!-- Секция для сравнения картин -->
+    <section class="comparison-section">
       <h2>Пример сравнения: картина, созданная человеком, и картина, созданная нейросетью</h2>
-      <div class="comparison-container">
-        <p><strong>1. Детали и текстуры</strong>.  
+      <ul>
+        <li><strong>1. Детали и текстуры</strong>.  
            — Нейросеть: Иногда изображения содержат странные артефакты, неестественные переходы.  
-           — Человек: Работы часто имеют осмысленную детализацию, мазки кисти или карандашные штрихи.</p>
-        <p><strong>2. Аномалии и ошибки</strong>.  
+           — Человек: Работы часто имеют осмысленную детализацию, мазки кисти или карандашные штрихи.</li>
+        <li><strong>2. Аномалии и ошибки</strong>.  
            — Нейросеть: Может выдавать анатомические ошибки, странные глаза, лишние пальцы.  
-           — Человек: У опытных художников такие ошибки редки.</p>
-        <p><strong>3. Осмысленность и композиция</strong>.  
+           — Человек: У опытных художников такие ошибки редки.</li>
+        <li><strong>3. Осмысленность и композиция</strong>.  
            — Нейросеть: Иногда расположение элементов хаотичное.  
-           — Человек: Композиция продуманнее, подчинена логике.</p>
-        <p><strong>4. Кистевые мазки и штрихи</strong>.  
+           — Человек: Композиция продуманнее, подчинена логике.</li>
+        <li><strong>4. Кистевые мазки и штрихи</strong>.  
            — Нейросеть: Цифровая имитация мазков может быть неестественной.  
-           — Человек: В реальной акварели/масле заметны следы кисти.</p>
-      </div>
-      <h3>Мы провели опрос среди подростков, обучающихся на профессии, связанные с дизайном, для понимания актуальности проекта и взгляда на вопрос с их стороны.</h3>
+           — Человек: В реальной акварели/масле заметны следы кисти.</li>
+      </ul>
+    </section>
+
+    <!-- Секция для результатов опроса -->
+    <section class="survey-section">
+      <h2>Опрос среди подростков-дизайнеров</h2>
+      <p>Мы провели опрос среди подростков, обучающихся на профессии, связанные с дизайном, для понимания актуальности проекта и взгляда на вопрос с их стороны.</p>
       <div class="survey-results">
         <img src="css/images/photo_5213367149861661817_x.jpg" alt="Фотография опроса">
         <div class="survey-text">
@@ -244,107 +255,76 @@
       </div>
     </section>
 
-  </div>
+    <!-- Секция теста -->
+    <section class="test-section">
+      <h2>Тест: выбери правильное изображение, которое нарисовала нейросеть</h2>
 
-  <section class="test-section">
-    <h2>Тест: выбери правильное изображение, которое нарисовала нейросеть</h2>
-
-    <div class="test-block">
-      <p style="text-align: center; font-weight: bold;">Вопрос 1:</p>
-      <div class="test-images">
-        <img 
-          src="css/images/true.jpg"
-          data-correct="true"
-          alt="Вариант 1"
-        />
-        <img 
-          src="css/images/false.jpg"
-          data-correct="false"
-          alt="Вариант 2"
-        />
+      <div class="test-block">
+        <p style="text-align: center; font-weight: bold;">Вопрос 1:</p>
+        <div class="test-images">
+          <img src="css/images/true.jpg" data-correct="true" alt="Вариант 1" />
+          <img src="css/images/false.jpg" data-correct="false" alt="Вариант 2" />
+        </div>
+        <div class="result-message"></div>
       </div>
-      <div class="result-message"></div>
-    </div>
 
-    <div class="test-block">
-      <p style="text-align: center; font-weight: bold;">Вопрос 2:</p>
-      <div class="test-images">
-        <img 
-          src="css/images/qwe.jpg"
-          data-correct="false"
-          alt="Вариант 1"
-        />
-        <img 
-          src="css/images/ded.jpg"
-          data-correct="true"
-          alt="Вариант 2"
-        />
+      <div class="test-block">
+        <p style="text-align: center; font-weight: bold;">Вопрос 2:</p>
+        <div class="test-images">
+          <img src="css/images/qwe.jpg" data-correct="false" alt="Вариант 1" />
+          <img src="css/images/ded.jpg" data-correct="true" alt="Вариант 2" />
+        </div>
+        <div class="result-message"></div>
       </div>
-      <div class="result-message"></div>
-    </div>
 
-    <div class="test-block">
-      <p style="text-align: center; font-weight: bold;">Вопрос 3:</p>
-      <div class="test-images">
-        <img 
-          src="css/images/kish.jpg"
-          data-correct="true"
-          alt="Вариант 1"
-        />
-        <img 
-          src="css/images/ok.jpg"
-          data-correct="false"
-          alt="Вариант 2"
-        />
+      <div class="test-block">
+        <p style="text-align: center; font-weight: bold;">Вопрос 3:</p>
+        <div class="test-images">
+          <img src="css/images/kish.jpg" data-correct="true" alt="Вариант 1" />
+          <img src="css/images/ok.jpg" data-correct="false" alt="Вариант 2" />
+        </div>
+        <div class="result-message"></div>
       </div>
-      <div class="result-message"></div>
-    </div>
 
-    <div class="test-block">
-      <p style="text-align: center; font-weight: bold;">Вопрос 4:</p>
-      <div class="test-images">
-        <img 
-          src="css/images/realwomen.jpg"
-          data-correct="false"
-          alt="Вариант 1"
-        />
-        <img 
-          src="css/images/women.jpg"
-          data-correct="true"
-          alt="Вариант 2"
-        />
+      <div class="test-block">
+        <p style="text-align: center; font-weight: bold;">Вопрос 4:</p>
+        <div class="test-images">
+          <img src="css/images/realwomen.jpg" data-correct="false" alt="Вариант 1" />
+          <img src="css/images/women.jpg" data-correct="true" alt="Вариант 2" />
+        </div>
+        <div class="result-message"></div>
       </div>
-      <div class="result-message"></div>
-    </div>
-  </section>
+    </section>
 
-  <script>
-    const testBlocks = document.querySelectorAll('.test-block');
+    <script>
+      const testBlocks = document.querySelectorAll('.test-block');
 
-    testBlocks.forEach((block) => {
-      const images = block.querySelectorAll('img');
-      const resultMessage = block.querySelector('.result-message');
+      testBlocks.forEach((block) => {
+        const images = block.querySelectorAll('img');
+        const resultMessage = block.querySelector('.result-message');
 
-      images.forEach((img) => {
-        img.addEventListener('click', () => {
-          if (img.dataset.correct === 'true') {
-            resultMessage.textContent = 'Это правильный ответ!';
-            resultMessage.style.color = 'green';
-          } else {
-            resultMessage.textContent = 'Это не правильный ответ!';
-            resultMessage.style.color = 'red';
-          }
+        images.forEach((img) => {
+          img.addEventListener('click', () => {
+            if (img.dataset.correct === 'true') {
+              resultMessage.textContent = 'Это правильный ответ!';
+              resultMessage.style.color = 'green';
+            } else {
+              resultMessage.textContent = 'Это не правильный ответ!';
+              resultMessage.style.color = 'red';
+            }
+          });
         });
       });
-    });
-  </script>
+    </script>
 
-  <div class="text-window">
-    <strong>Ссылки на источники:</strong>
-    <p>https://arxiv.org/abs/2307.07521?utm_source</p>
-    <p>https://aiartmagazine.org/breaking-boundaries-the-impact-of-neural-networks-on-the-artistic-process/?utm_source</p>
-    <p>https://forklog.com/exclusive/ai/konets-ili-vtoroe-dyhanie-kak-nejroseti-menyayut-mir-izobrazitelnogo-iskusstva</p>
-    <p>https://skillbox.ru/media/design/artists-about-AI-24/?utm_source</p>
+    <div class="text-window">
+      <strong>Ссылки на источники:</strong>
+      <p>https://arxiv.org/abs/2307.07521?utm_source</p>
+      <p>https://aiartmagazine.org/breaking-boundaries-the-impact-of-neural-networks-on-the-artistic-process/?utm_source</p>
+      <p>https://forklog.com/exclusive/ai/konets-ili-vtoroe-dyhanie-kak-nejroseti-menyayut-mir-izobrazitelnogo-iskusstva</p>
+      <p>https://skillbox.ru/media/design/artists-about-AI-24/?utm_source</p>
+    </div>
+
   </div>
 
   <footer class="site-footer">
