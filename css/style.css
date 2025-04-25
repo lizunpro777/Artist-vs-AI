@@ -125,9 +125,11 @@ ul {
   margin: 20px 0;
   border-radius: 5px;
   font-style: italic;
+  
 /*-----------------------------------
    Секция теста (вопросы/ответы)
 ------------------------------------- */
+  
 .test-section {
   margin-top: 40px;
   padding: 20px;
