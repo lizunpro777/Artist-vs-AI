@@ -126,7 +126,12 @@ ul {
   border-radius: 5px;
   font-style: italic;
 }
-
+.site-header {
+  background: url("photo_5213367149861661817_x.jpg") no-repeat center center; /* Замените на нужное изображение */
+  background-size: cover;
+  padding: 50px;
+  text-align="left": 10px;
+} 
 /* ------------------------------------
    Секция теста (вопросы/ответы)
 ------------------------------------- */
