@@ -1,180 +1,210 @@
 /* Сброс базовых стилей */
- * {
-   margin: 0;
-   padding: 0;
- @@ -17,10 +18,10 @@ body {
-   line-height: 1.6;
- }
- 
- /* Шапка сайта с возможностью задать фон в виде изображения */
- /* Шапка сайта  */
- /* ------------------------------------
-    Шапка сайта с фоновым изображением
- ------------------------------------- */
- .site-header {
-   /* Чтобы вместо однотонной подложки использовать фотографию, замените background-color на background-image */
-   background: url("images/AAAAAA.jpg") no-repeat center center; /* Замените на нужное изображение */
-   background-size: cover;
-   padding: 50px;
- @@ -32,13 +33,9 @@ body {
-   font-size: 2em;
- }
- 
- /* Обертка для контента и боковых изображений */
- .page-wrapper {
-   /* На мобильных устройствах используется блочный режим */
-   display: block;
- }
- 
- /* Основной контейнер для контента */
- /* ------------------------------------
-    Основной контейнер
- ------------------------------------- */
- .content-container {
-   max-width: 1000px;
-   margin: 0 auto;
- @@ -79,16 +76,19 @@ ul {
-   justify-content: space-around;
- }
- 
- .comparison-container p {
-   max-width: 500px; /* чтобы текст не растягивался слишком широко */
- }
- 
- .image-block {
-   flex: 1 1 300px;
-   text-align: center;
- }
- 
- /* Здесь уменьшаем картинки внутри блока .image-block */
- /* max-width: 300px означает, что картинка не будет шире 300px */
- /* Картинки внутри .image-block */
- .image-block img {
-   max-width: 250px; /* <-- Меняя это число, вы регулируете максимальную ширину */
-   width: 100%;      /* Пусть на узких экранах она сжимается до контейнера */
-   max-width: 250px;
-   width: 100%;
-   height: auto;
-   border-radius: 6px;
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
- @@ -100,7 +100,9 @@ ul {
-   color: #4b734b;
- }
- 
- /* Подвал сайта */
- /* ------------------------------------
-    Подвал сайта
- ------------------------------------- */
- .site-footer {
-   background-color: #9ed89e;
-   text-align: center;
- @@ -114,39 +116,7 @@ ul {
- }
- 
- /* ------------------------------------
-    Стили для боковых изображений (видны только на ПК)
- ------------------------------------- */
- /* 
-    Стили для боковых изображений (видны только на ПК) */
- .side-image {
-   display: none;
- }
- 
- @media (min-width: 1024px) {
-   .page-wrapper {
-     display: flex;
-     align-items: flex-start;
-     justify-content: center;
-   }
-   .side-image {
-     display: block;
-     flex: 0 0 auto;
-     width: 150px; /* Измените здесь ширину бокового изображения по необходимости */
-     margin: 0 20px;
-   }
-   .side-image img {
-     width: 100%;
-     height: auto;
-     border-radius: 6px;
-     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-   }
-   .content-container {
-     flex: 1 1 auto;
-   }
- }
- 
- /* ------------------------------------
-    Стили для окон между абзацами
-    Стили окон между абзацами
- ------------------------------------- */
- .text-window {
-   border: 2px solid #8cad87;
- @@ -158,7 +128,7 @@ ul {
- }
- 
- /* ------------------------------------
-    Секция теста
-    Секция теста (вопросы/ответы)
- ------------------------------------- */
- .test-section {
-   margin-top: 40px;
- @@ -181,9 +151,8 @@ ul {
- }
- 
- /* Сами изображения (кликабельные) */
- /* Тут width: 200px, меняйте это число, чтобы увеличить/уменьшить */
- .test-images img {
-   width: 250px;
-   width: 250px;  /* Меняйте это число, чтобы увеличить/уменьшить */
-   height: auto;
-   cursor: pointer;
-   border-radius: 5px;
- @@ -195,9 +164,47 @@ ul {
-   transform: scale(1.05);
- }
- 
- /* Сообщение о результате (правильно/неправильно) */
- .result-message {
-   font-weight: bold;
-   text-align: center;
-   margin-top: 10px;
- }
- 
- /* ------------------------------------
-    Адаптивные стили для мобильных
- ------------------------------------- */
- 
- /* Все стили, которые должны срабатывать при ширине <= 768px (пример) */
- @media (max-width: 768px) {
- 
-   /* Уменьшим отступ шапки, чтобы не занимать слишком много места на мобильных */
-   .site-header {
-     padding: 30px;
-   }
- 
-   .site-header h1 {
-     font-size: 1.5em;
-   }
- 
-   /* Контейнер тоже можно сделать менее широким и сократить отступы */
-   .content-container {
-     max-width: 95%;
-     padding: 20px 10px;
-   }
- 
-   /* Текстовые блоки в .comparison-container будут в столбик */
-   .comparison-container {
-     flex-direction: column;
-     align-items: center;
-   }
- 
-   /* Изображения в тесте располагаем в столбик, чтобы было удобно на узких экранах */
-   .test-images {
-     flex-direction: column;
-   }
-   .test-images img {
-     width: 80%; /* Картинки занимают 80% ширины контейнера */
-     max-width: 400px; /* Не растягиваться слишком много */
-     margin-bottom: 15px; 
-   }
- }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Подключаем необычный шрифт (например, Lobster) для заголовков */
+h1, h2, h3, h4 {
+  font-family: 'Lobster', cursive, sans-serif;
+}
+
+/* Стиль тела страницы с плоским ("Флэт") дизайном в пастельно-зелёных тонах */
+body {
+  background-color: #b9edb9; /* Светло-пастельный зелёный фон */
+  color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ------------------------------------
+   Шапка сайта с фоновым изображением
+------------------------------------- */
+.site-header {
+  background: url("images/AAAAAA.jpg") no-repeat center center; /* Замените на нужное изображение */
+  background-size: cover;
+  padding: 50px;
+  text-align: center;
+}
+
+.site-header h1 {
+  color: #212b21;
+  font-size: 2em;
+}
+
+/* ------------------------------------
+   Основной контейнер
+------------------------------------- */
+.content-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Заголовки */
+h2 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #324a32;
+}
+
+/* Оформление списков */
+ul {
+  margin: 10px 0 20px 20px;
+  list-style-type: disc;
+}
+
+/* ------------------------------------
+   Блок с сравнением изображений
+------------------------------------- */
+.images-comparison {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #d0e8d0; /* светлый, чуть контрастный фон */
+  border-radius: 10px;
+}
+
+.images-comparison h2 {
+  margin-bottom: 20px;
+}
+
+.comparison-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.comparison-container p {
+  max-width: 500px; /* чтобы текст не растягивался слишком широко */
+}
+
+.image-block {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+/* Картинки внутри .image-block */
+.image-block img {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.image-block p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #4b734b;
+}
+
+/* ------------------------------------
+   Подвал сайта
+------------------------------------- */
+.site-footer {
+  background-color: #9ed89e;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+.site-footer p {
+  color: #fff;
+  font-size: 0.9em;
+}
+
+/* ------------------------------------
+   Стили окон между абзацами
+------------------------------------- */
+.text-window {
+  border: 2px solid #8cad87;
+  background-color: #e0f7e0;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 5px;
+  font-style: italic;
+  
+/*-----------------------------------
+   Секция теста (вопросы/ответы)
+------------------------------------- */
+  
+.test-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f2f9f2; /* нежно-зелёный фон */
+  border-radius: 10px;
+}
+
+/* Блок вопроса */
+.test-block {
+  margin-bottom: 30px;
+}
+
+/* Внутри каждого блока две картинки (варианты ответа) */
+.test-images {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* центрируем изображения */
+  margin-top: 15px;
+}
+
+/* Сами изображения (кликабельные) */
+.test-images img {
+  width: 270px;  /* Меняйте это число, чтобы увеличить/уменьшить */
+  height: auto;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
+}
+
+.test-images img:hover {
+  transform: scale(1.05);
+}
+
+.result-message {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ------------------------------------
+   Адаптивные стили для мобильных
+------------------------------------- */
+
+/* Все стили, которые должны срабатывать при ширине <= 768px (пример) */
+@media (max-width: 768px) {
+
+  /* Уменьшим отступ шапки, чтобы не занимать слишком много места на мобильных */
+  .site-header {
+    padding: 30px;
+  }
+
+  .site-header h1 {
+    font-size: 1.5em;
+  }
+
+  /* Контейнер тоже можно сделать менее широким и сократить отступы */
+  .content-container {
+    max-width: 95%;
+    padding: 20px 10px;
+  }
+
+  /* Текстовые блоки в .comparison-container будут в столбик */
+  .comparison-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Изображения в тесте располагаем в столбик, чтобы было удобно на узких экранах */
+  .test-images {
+    flex-direction: column;
+  }
+  .test-images img {
+    width: 80%; /* Картинки занимают 80% ширины контейнера */
+    max-width: 400px; /* Не растягиваться слишком много */
+    margin-bottom: 15px; 
+  }
+}
