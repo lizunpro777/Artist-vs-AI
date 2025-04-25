@@ -5,12 +5,12 @@
   box-sizing: border-box;
 }
 
-/* Подключаем необычный шрифт (например, Lobster) для заголовков */
-h1, h2, h3, h4 {
+/* Подключаем шрифт Lobster для заголовков */
+h1, h2, h3 {
   font-family: 'Lobster', cursive, sans-serif;
 }
 
-/* Стиль тела страницы с плоским ("Флэт") дизайном в пастельно-зелёных тонах */
+/* Стиль тела страницы */
 body {
   background-color: #b9edb9;
   color: #333;
@@ -18,9 +18,7 @@ body {
   line-height: 1.6;
 }
 
-/* ------------------------------------
-   Шапка сайта с фоновым изображением
-------------------------------------- */
+/* Шапка сайта */
 .site-header {
   background: url("images/AAAAAA.jpg") no-repeat center center;
   background-size: cover;
@@ -33,9 +31,7 @@ body {
   font-size: 2em;
 }
 
-/* ------------------------------------
-   Основной контейнер
-------------------------------------- */
+/* Основной контейнер */
 .content-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -55,69 +51,7 @@ ul {
   list-style-type: disc;
 }
 
-/* ------------------------------------
-   Блок с сравнением изображений
-------------------------------------- */
-.images-comparison {
-  margin-top: 40px;
-  padding: 20px;
-  background-color: #d0e8d0;
-  border-radius: 10px;
-}
-
-.images-comparison h2 {
-  margin-bottom: 20px;
-}
-
-.comparison-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-around;
-}
-
-.comparison-container p {
-  max-width: 500px;
-}
-
-.image-block {
-  flex: 1 1 300px;
-  text-align: center;
-}
-
-/* Картинки внутри .image-block */
-.image-block img {
-  max-width: 250px;
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-}
-
-.image-block p {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #4b734b;
-}
-
-/* ------------------------------------
-   Подвал сайта
-------------------------------------- */
-.site-footer {
-  background-color: #9ed89e;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-}
-
-.site-footer p {
-  color: #fff;
-  font-size: 0.9em;
-}
-
-/* ------------------------------------
-   Стили окон между абзацами
-------------------------------------- */
+/* Окна между абзацами */
 .text-window {
   border: 2px solid #8cad87;
   background-color: #e0f7e0;
@@ -127,9 +61,55 @@ ul {
   font-style: italic;
 }
 
-/* ------------------------------------
-   Секция теста (вопросы/ответы)
-------------------------------------- */
+/* Секция для сравнения картин */
+.comparison-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #d0e8d0;
+  border-radius: 10px;
+}
+
+.comparison-section h2 {
+  margin-bottom: 20px;
+}
+
+.comparison-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comparison-section li {
+  margin-bottom: 15px;
+}
+
+/* Секция для результатов опроса */
+.survey-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #d0e8d0;
+  border-radius: 10px;
+}
+
+.survey-section h2 {
+  margin-bottom: 20px;
+}
+
+.survey-results {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.survey-results img {
+  max-width: 300px;
+  height: auto;
+}
+
+.survey-text {
+  flex: 1;
+}
+
+/* Секция теста */
 .test-section {
   margin-top: 40px;
   padding: 20px;
@@ -137,12 +117,10 @@ ul {
   border-radius: 10px;
 }
 
-/* Блок вопроса */
 .test-block {
   margin-bottom: 30px;
 }
 
-/* Внутри каждого блока две картинки (варианты ответа) */
 .test-images {
   display: flex;
   gap: 20px;
@@ -150,7 +128,6 @@ ul {
   margin-top: 15px;
 }
 
-/* Сами изображения (кликабельные) */
 .test-images img {
   width: 250px;
   height: auto;
@@ -170,9 +147,20 @@ ul {
   margin-top: 10px;
 }
 
-/* ------------------------------------
-   Адаптивные стили для мобильных
-------------------------------------- */
+/* Подвал сайта */
+.site-footer {
+  background-color: #9ed89e;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+.site-footer p {
+  color: #fff;
+  font-size: 0.9em;
+}
+
+/* Адаптивные стили для мобильных */
 @media (max-width: 768px) {
   .site-header {
     padding: 30px;
@@ -187,47 +175,21 @@ ul {
     padding: 20px 10px;
   }
 
-  .comparison-container {
+  .survey-results {
     flex-direction: column;
-    align-items: center;
+  }
+
+  .survey-results img {
+    max-width: 100%;
   }
 
   .test-images {
     flex-direction: column;
   }
+
   .test-images img {
     width: 80%;
     max-width: 400px;
-    margin-bottom: 15px; 
-  }
-}
-
-/* Новые стили для опроса */
-.survey-results {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.survey-results img {
-  max-width: 300px;
-  height: auto;
-}
-
-.survey-text {
-  flex: 1;
-}
-
-.images-comparison h3 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-  .survey-results {
-    flex-direction: column;
-  }
-  .survey-results img {
-    max-width: 100%;
+    margin-bottom: 15px;
   }
 }
