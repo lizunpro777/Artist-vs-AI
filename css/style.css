@@ -12,7 +12,7 @@ h1, h2, h3, h4 {
 
 /* Стиль тела страницы с плоским ("Флэт") дизайном в пастельно-зелёных тонах */
 body {
-  background-color: #b9edb9; /* Светло-пастельный зелёный фон */
+  background-color: #b9edb9;
   color: #333;
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -22,7 +22,7 @@ body {
    Шапка сайта с фоновым изображением
 ------------------------------------- */
 .site-header {
-  background: url("images/AAAAAA.jpg") no-repeat center center; /* Замените на нужное изображение */
+  background: url("images/AAAAAA.jpg") no-repeat center center;
   background-size: cover;
   padding: 50px;
   text-align: center;
@@ -61,7 +61,7 @@ ul {
 .images-comparison {
   margin-top: 40px;
   padding: 20px;
-  background-color: #d0e8d0; /* светлый, чуть контрастный фон */
+  background-color: #d0e8d0;
   border-radius: 10px;
 }
 
@@ -77,7 +77,7 @@ ul {
 }
 
 .comparison-container p {
-  max-width: 500px; /* чтобы текст не растягивался слишком широко */
+  max-width: 500px;
 }
 
 .image-block {
@@ -133,7 +133,7 @@ ul {
 .test-section {
   margin-top: 40px;
   padding: 20px;
-  background-color: #f2f9f2; /* нежно-зелёный фон */
+  background-color: #f2f9f2;
   border-radius: 10px;
 }
 
@@ -146,13 +146,13 @@ ul {
 .test-images {
   display: flex;
   gap: 20px;
-  justify-content: center; /* центрируем изображения */
+  justify-content: center;
   margin-top: 15px;
 }
 
 /* Сами изображения (кликабельные) */
 .test-images img {
-  width: 250px;  /* Меняйте это число, чтобы увеличить/уменьшить */
+  width: 250px;
   height: auto;
   cursor: pointer;
   border-radius: 5px;
@@ -173,11 +173,7 @@ ul {
 /* ------------------------------------
    Адаптивные стили для мобильных
 ------------------------------------- */
-
-/* Все стили, которые должны срабатывать при ширине <= 768px (пример) */
 @media (max-width: 768px) {
-
-  /* Уменьшим отступ шапки, чтобы не занимать слишком много места на мобильных */
   .site-header {
     padding: 30px;
   }
@@ -186,25 +182,52 @@ ul {
     font-size: 1.5em;
   }
 
-  /* Контейнер тоже можно сделать менее широким и сократить отступы */
   .content-container {
     max-width: 95%;
     padding: 20px 10px;
   }
 
-  /* Текстовые блоки в .comparison-container будут в столбик */
   .comparison-container {
     flex-direction: column;
     align-items: center;
   }
 
-  /* Изображения в тесте располагаем в столбик, чтобы было удобно на узких экранах */
   .test-images {
     flex-direction: column;
   }
   .test-images img {
-    width: 80%; /* Картинки занимают 80% ширины контейнера */
-    max-width: 400px; /* Не растягиваться слишком много */
+    width: 80%;
+    max-width: 400px;
     margin-bottom: 15px; 
+  }
+}
+
+/* Новые стили для опроса */
+.survey-results {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.survey-results img {
+  max-width: 300px;
+  height: auto;
+}
+
+.survey-text {
+  flex: 1;
+}
+
+.images-comparison h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .survey-results {
+    flex-direction: column;
+  }
+  .survey-results img {
+    max-width: 100%;
   }
 }
